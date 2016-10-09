@@ -586,7 +586,7 @@ open class SVSlidingPanelViewController: UIViewController, UIGestureRecognizerDe
     
     //MARK: Checking controller is on top level or not
     
-    public func isTopeLevelViewController(_ controller: UIViewController?) -> Bool {
+    public func isTopLevelViewController(_ controller: UIViewController?) -> Bool {
         
         guard let topController = controller else {
             return false
@@ -731,7 +731,7 @@ open class SVSlidingPanelViewController: UIViewController, UIGestureRecognizerDe
         if (gestureRecognizer.view == self.tapView) {
             return true
         }
-        else if self.shouldPanningLimitedToTopViewController && !self.isTopeLevelViewController(self.centerPanel) {
+        else if self.shouldPanningLimitedToTopViewController && !self.isTopLevelViewController(self.centerPanel) {
             return false
         }
         else if let gesture =  gestureRecognizer as? UIPanGestureRecognizer {
